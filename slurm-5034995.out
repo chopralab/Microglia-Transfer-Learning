@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "best.py", line 9, in <module>
+    main()
+  File "best.py", line 5, in main
+    model = YOLO("/scratch/gilbreth/jpfinley/ultralytics/ultralytics/cfg/datasets/custom.yaml", task=detect)
+NameError: name 'detect' is not defined

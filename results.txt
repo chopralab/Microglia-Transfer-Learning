@@ -1,0 +1,65 @@
+Tuning 30 epochs
+Micro
+model     metrics/precision(B)     metrics/recall(B)     metrics/mAP50(B)     metrics/mAP50-95(B)
+n                     0.0406667              0.83945             0.312089               0.0968644
+s                     0.411868               0.56422             0.410304                0.144141
+l                     0.387779              0.33945              0.260499               0.0770244
+m                     0.40572                0.645132            0.443174                0.168049
+x                     0.492631               0.534474             0.477487               0.125968
+
+
+Training 50 epochs
+Micro
+n train1 {'metrics/precision(B)': 0.5414162308013722, 'metrics/recall(B)': 0.47706422018348627, 'metrics/mAP50(B)': 0.4651260164006293, 'metrics/mAP50-95(B)': 0.15814004479113142, 'fitness': 0.18883864195208122}
+s train2 {'metrics/precision(B)': 0.6264528662424486, 'metrics/recall(B)': 0.518348623853211, 'metrics/mAP50(B)': 0.5385276597059194, 'metrics/mAP50-95(B)': 0.19026044875301723, 'fitness': 0.22508716984830746}
+l train3 {'metrics/precision(B)': 0.44397393479543373, 'metrics/recall(B)': 0.43119266055045874, 'metrics/mAP50(B)': 0.3121359448785275, 'metrics/mAP50-95(B)': 0.09143586934295116, 'fitness': 0.1135058768965088}
+m train4 {'metrics/precision(B)': 0.3827781417251571, 'metrics/recall(B)': 0.5275229357798165, 'metrics/mAP50(B)': 0.3451034012527603, 'metrics/mAP50-95(B)': 0.10237087965372293, 'fitness': 0.1266441318136267}
+x train5 {'metrics/precision(B)': 0.3827781417251571, 'metrics/recall(B)': 0.5275229357798165, 'metrics/mAP50(B)': 0.3451034012527603, 'metrics/mAP50-95(B)': 0.10237087965372293, 'fitness': 0.1266441318136267}
+
+ren train11 {'metrics/precision(B)': 0.6902122553532517, 'metrics/recall(B)': 0.7339449541284404, 'metrics/mAP50(B)': 0.6978231866221873, 'metrics/mAP50-95(B)': 0.2768027388514156, 'fitness': 0.3189047836284928}
+res train12 {'metrics/precision(B)': 0.5874216054582164, 'metrics/recall(B)': 0.7247706422018348, 'metrics/mAP50(B)': 0.6673627876202782, 'metrics/mAP50-95(B)': 0.2716520410746606, 'fitness': 0.3112231157292224}
+rel train13 {'metrics/precision(B)': 0.6320874479880857, 'metrics/recall(B)': 0.555045871559633, 'metrics/mAP50(B)': 0.5902226358236523, 'metrics/mAP50-95(B)': 0.24912735332724653, 'fitness': 0.2832368815768871}
+rem train14 {'metrics/precision(B)': 0.6573764482274, 'metrics/recall(B)': 0.6651376146788991, 'metrics/mAP50(B)': 0.6482527443794568, 'metrics/mAP50-95(B)': 0.24832120980556388, 'fitness': 0.2883143632629532}
+rex train15 {'metrics/precision(B)': 0.6645329065873431, 'metrics/recall(B)': 0.6972477064220184, 'metrics/mAP50(B)': 0.6639770173033037, 'metrics/mAP50-95(B)': 0.25329698361319336, 'fitness': 0.2943649869822044}
+
+
+Fitness Values:
+n 
+s 
+l 
+m 
+x 
+
+ren 
+res 0.3189047836284928
+rel 
+rem 
+rex 
+
+
+Detect Metrics:
+n val3 5035007 {'metrics/precision(B)': 0.5414162308013722, 'metrics/recall(B)': 0.47706422018348627, 'metrics/mAP50(B)': 0.4651260164006293, 'metrics/mAP50-95(B)': 0.15814004479113142, 'fitness': 0.18883864195208122}
+s val4 5035012 {'metrics/precision(B)': 0.6218039110951126, 'metrics/recall(B)': 0.518348623853211, 'metrics/mAP50(B)': 0.5380402847015369, 'metrics/mAP50-95(B)': 0.19034453442560192, 'fitness': 0.22511410945319543}
+l val5 5035093 {'metrics/precision(B)': 0.44397393479543373, 'metrics/recall(B)': 0.43119266055045874, 'metrics/mAP50(B)': 0.3121359448785275, 'metrics/mAP50-95(B)': 0.09143586934295116, 'fitness': 0.1135058768965088}
+m val6 5035174 {'metrics/precision(B)': 0.5037817648197777, 'metrics/recall(B)': 0.6284403669724771, 'metrics/mAP50(B)': 0.5220074218283881, 'metrics/mAP50-95(B)': 0.16934166928818686, 'fitness': 0.204608244542207}
+x val7 5035175 {'metrics/precision(B)': 0.3827781417251571, 'metrics/recall(B)': 0.5275229357798165, 'metrics/mAP50(B)': 0.3451034012527603, 'metrics/mAP50-95(B)': 0.10237087965372293, 'fitness': 0.1266441318136267}
+
+ren val8 5035177 {'metrics/precision(B)': 0.6902122553532517, 'metrics/recall(B)': 0.7339449541284404, 'metrics/mAP50(B)': 0.6978231866221873, 'metrics/mAP50-95(B)': 0.2768027388514156, 'fitness': 0.3189047836284928}
+res val9 5035179 {'metrics/precision(B)': 0.5874216054582164, 'metrics/recall(B)': 0.7247706422018348, 'metrics/mAP50(B)': 0.6673627876202782, 'metrics/mAP50-95(B)': 0.2716520410746606, 'fitness': 0.3112231157292224}
+rel val10 5035181 {'metrics/precision(B)': 0.6320874479880857, 'metrics/recall(B)': 0.555045871559633, 'metrics/mAP50(B)': 0.5902226358236523, 'metrics/mAP50-95(B)': 0.24912735332724653, 'fitness': 0.2832368815768871}
+rem val11 5035182 {'metrics/precision(B)': 0.6573764482274, 'metrics/recall(B)': 0.6651376146788991, 'metrics/mAP50(B)': 0.6482527443794568, 'metrics/mAP50-95(B)': 0.24832120980556388, 'fitness': 0.2883143632629532}
+rex val12 5035186 {'metrics/precision(B)': 0.6645329065873431, 'metrics/recall(B)': 0.6972477064220184, 'metrics/mAP50(B)': 0.6639770173033037, 'metrics/mAP50-95(B)': 0.25329698361319336, 'fitness': 0.2943649869822044}
+
+
+Fitness Values:
+n 0.18883864195208122
+s 0.22511410945319543
+l 0.1135058768965088
+m 0.204608244542207
+x 0.1266441318136267
+
+ren 0.3189047836284928
+res 0.3112231157292224
+rel 0.2832368815768871
+rem 0.2883143632629532
+rex 0.2943649869822044

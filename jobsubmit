@@ -1,0 +1,5 @@
+#!/bin/bash
+module load anaconda
+conda activate yolov8
+
+python training.py

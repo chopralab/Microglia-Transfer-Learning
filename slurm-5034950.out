@@ -1,0 +1,8 @@
+Ultralytics YOLOv8.1.15 🚀 Python-3.8.18 torch-2.1.1+cu121 CUDA:0 (NVIDIA A100 80GB PCIe, 81050MiB)
+Model summary (fused): 168 layers, 3005843 parameters, 0 gradients, 8.1 GFLOPs
+[34m[1mval: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/valid/labels.cache... 15 images, 0 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s][34m[1mval: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/valid/labels.cache... 15 images, 0 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:03<00:00,  3.76s/it]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [00:03<00:00,  3.76s/it]                   all         15        218      0.541      0.477      0.465      0.158
+Speed: 0.1ms preprocess, 5.3ms inference, 0.0ms loss, 26.6ms postprocess per image
+Results saved to [1mruns/detect/val2[0m
+💡 Learn more at https://docs.ultralytics.com/modes/val
+

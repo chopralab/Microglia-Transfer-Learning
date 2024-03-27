@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "training.py", line 5, in <module>
+    model = YOLO("ultralytics/runs/detect/train6/weights/best.pt")
+  File "/scratch/gilbreth/jpfinley/ultralytics/ultralytics/engine/model.py", line 134, in __init__
+    self._load(model, task=task)
+  File "/scratch/gilbreth/jpfinley/ultralytics/ultralytics/engine/model.py", line 215, in _load
+    self.model, self.ckpt = attempt_load_one_weight(weights)
+  File "/scratch/gilbreth/jpfinley/ultralytics/ultralytics/nn/tasks.py", line 709, in attempt_load_one_weight
+    ckpt, weight = torch_safe_load(weight)  # load ckpt
+  File "/scratch/gilbreth/jpfinley/ultralytics/ultralytics/nn/tasks.py", line 634, in torch_safe_load
+    ckpt = torch.load(file, map_location="cpu")
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/torch/serialization.py", line 986, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/torch/serialization.py", line 435, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/torch/serialization.py", line 416, in __init__
+    super().__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'ultralytics/runs/detect/train6/weights/best.pt'
