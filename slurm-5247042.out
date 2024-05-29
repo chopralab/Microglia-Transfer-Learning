@@ -1,0 +1,228 @@
+💡 Learn about RayTune at https://docs.ultralytics.com/integrations/ray-tune
+Requirement already satisfied: ray[tune] in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (2.9.2)
+Requirement already satisfied: click>=7.0 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (8.1.7)
+Requirement already satisfied: filelock in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (3.13.1)
+Requirement already satisfied: jsonschema in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (4.20.0)
+Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (1.0.7)
+Requirement already satisfied: packaging in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (23.1)
+Requirement already satisfied: protobuf!=3.19.5,>=3.15.3 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (4.25.1)
+Requirement already satisfied: pyyaml in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (6.0.1)
+Requirement already satisfied: aiosignal in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (1.3.1)
+Requirement already satisfied: frozenlist in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (1.4.0)
+Requirement already satisfied: requests in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (2.31.0)
+Requirement already satisfied: pandas in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (2.0.3)
+Requirement already satisfied: tensorboardX>=1.9 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (2.6.2.2)
+Requirement already satisfied: pyarrow>=6.0.1 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (14.0.1)
+Requirement already satisfied: fsspec in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from ray[tune]) (2023.12.2)
+Requirement already satisfied: numpy>=1.16.6 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from pyarrow>=6.0.1->ray[tune]) (1.24.3)
+Requirement already satisfied: attrs>=22.2.0 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from jsonschema->ray[tune]) (23.1.0)
+Requirement already satisfied: importlib-resources>=1.4.0 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from jsonschema->ray[tune]) (6.1.1)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from jsonschema->ray[tune]) (2023.11.2)
+Requirement already satisfied: pkgutil-resolve-name>=1.3.10 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from jsonschema->ray[tune]) (1.3.10)
+Requirement already satisfied: referencing>=0.28.4 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from jsonschema->ray[tune]) (0.32.0)
+Requirement already satisfied: rpds-py>=0.7.1 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from jsonschema->ray[tune]) (0.13.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from pandas->ray[tune]) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from pandas->ray[tune]) (2023.3.post1)
+Requirement already satisfied: tzdata>=2022.1 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from pandas->ray[tune]) (2023.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from requests->ray[tune]) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from requests->ray[tune]) (3.6)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/jpfinley/.local/lib/python3.8/site-packages (from requests->ray[tune]) (2.1.0)
+Requirement already satisfied: certifi>=2017.4.17 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from requests->ray[tune]) (2023.11.17)
+Requirement already satisfied: zipp>=3.1.0 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from importlib-resources>=1.4.0->jsonschema->ray[tune]) (3.17.0)
+Requirement already satisfied: six>=1.5 in /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas->ray[tune]) (1.16.0)
+2024-04-02 14:43:41,938	INFO worker.py:1724 -- Started a local Ray instance.
+WARNING ⚠️ search space not provided, using default search space.
+2024-04-02 14:44:04,036	INFO tune.py:592 -- [output] This will use the new output engine with verbosity 1. To disable the new output and use the legacy output engine, set the environment variable RAY_AIR_NEW_OUTPUT=0. For more information, please see https://github.com/ray-project/ray/issues/36949
+2024-04-02 14:44:04,107	INFO wandb.py:307 -- Already logged into W&B.
+[36m(pid=103236)[0m [2024-04-02 14:44:04,335 E 103236 104450] logging.cc:97: Unhandled exception: N5boost10wrapexceptINS_6system12system_errorEEE. what(): thread: Resource temporarily unavailable [system:11]
+[36m(pid=103236)[0m [2024-04-02 14:44:04,508 E 103236 104450] logging.cc:104: Stack trace: 
+[36m(pid=103236)[0m  /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10051da) [0x2b4ea55631da] ray::operator<<()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x1007918) [0x2b4ea5565918] ray::TerminateHandler()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/bin/../lib/libstdc++.so.6(+0xb135a) [0x2b4ea5e3535a] __cxxabiv1::__terminate()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/bin/../lib/libstdc++.so.6(+0xb13c5) [0x2b4ea5e353c5]
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/bin/../lib/libstdc++.so.6(+0xb1658) [0x2b4ea5e35658]
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x558e86) [0x2b4ea4ab6e86] boost::throw_exception<>()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10f14fb) [0x2b4ea564f4fb] boost::asio::detail::do_throw_error()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10f1f1b) [0x2b4ea564ff1b] boost::asio::detail::posix_thread::start_thread()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10f237c) [0x2b4ea565037c] boost::asio::thread_pool::thread_pool()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0xa30504) [0x2b4ea4f8e504] ray::rpc::(anonymous namespace)::_GetServerCallExecutor()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(_ZN3ray3rpc21GetServerCallExecutorEv+0x9) [0x2b4ea4f8e599] ray::rpc::GetServerCallExecutor()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(_ZNSt17_Function_handlerIFvN3ray6StatusESt8functionIFvvEES4_EZNS0_3rpc14ServerCallImplINS6_24CoreWorkerServiceHandlerENS6_11ExitRequestENS6_9ExitReplyELNS6_8AuthTypeE0EE17HandleRequestImplEbEUlS1_S4_S4_E0_E9_M_invokeERKSt9_Any_dataOS1_OS4_SJ_+0xe2) [0x2b4ea4caf8e2] std::_Function_handler<>::_M_invoke()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(_ZN3ray4core10CoreWorker10HandleExitENS_3rpc11ExitRequestEPNS2_9ExitReplyESt8functionIFvNS_6StatusES6_IFvvEES9_EE+0x108) [0x2b4ea4cf66e8] ray::core::CoreWorker::HandleExit()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(_ZN3ray3rpc14ServerCallImplINS0_24CoreWorkerServiceHandlerENS0_11ExitRequestENS0_9ExitReplyELNS0_8AuthTypeE0EE17HandleRequestImplEb+0xfe) [0x2b4ea4ce713e] ray::rpc::ServerCallImpl<>::HandleRequestImpl()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0xa41cee) [0x2b4ea4f9fcee] EventTracker::RecordExecution()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0xa3b0de) [0x2b4ea4f990de] std::_Function_handler<>::_M_invoke()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0xa3b556) [0x2b4ea4f99556] boost::asio::detail::completion_handler<>::do_complete()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10eeb8b) [0x2b4ea564cb8b] boost::asio::detail::scheduler::do_run_one()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10f0509) [0x2b4ea564e509] boost::asio::detail::scheduler::run()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10f0c12) [0x2b4ea564ec12] boost::asio::io_context::run()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(_ZN3ray4core10CoreWorker12RunIOServiceEv+0xc9) [0x2b4ea4ccd1d9] ray::core::CoreWorker::RunIOService()
+[36m(pid=103236)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0xb2ee00) [0x2b4ea508ce00] thread_proxy
+[36m(pid=103236)[0m /usr/lib64/libpthread.so.0(+0x7ea5) [0x2b4e9cef0ea5] start_thread
+[36m(pid=103236)[0m /usr/lib64/libc.so.6(clone+0x6d) [0x2b4e9d90cb0d] clone
+[36m(pid=103236)[0m 
+[36m(pid=103236)[0m *** SIGABRT received at time=1712083444 on cpu 8 ***
+[36m(pid=103236)[0m PC: @     0x2b4e9d844387  (unknown)  raise
+[36m(pid=103236)[0m     @     0x2b4e9cef8630       3488  (unknown)
+[36m(pid=103236)[0m     @     0x2b4ea5e3535a  (unknown)  __cxxabiv1::__terminate()
+[36m(pid=103236)[0m     @     0x2b4ea5e35580  (unknown)  (unknown)
+[36m(pid=103236)[0m [2024-04-02 14:44:04,508 E 103236 104450] logging.cc:361: *** SIGABRT received at time=1712083444 on cpu 8 ***
+[36m(pid=103236)[0m [2024-04-02 14:44:04,508 E 103236 104450] logging.cc:361: PC: @     0x2b4e9d844387  (unknown)  raise
+[36m(pid=103236)[0m [2024-04-02 14:44:04,508 E 103236 104450] logging.cc:361:     @     0x2b4e9cef8630       3488  (unknown)
+[36m(pid=103236)[0m [2024-04-02 14:44:04,508 E 103236 104450] logging.cc:361:     @     0x2b4ea5e3535a  (unknown)  __cxxabiv1::__terminate()
+[36m(pid=103236)[0m [2024-04-02 14:44:04,509 E 103236 104450] logging.cc:361:     @     0x2b4ea5e35580  (unknown)  (unknown)
+[36m(pid=103236)[0m Fatal Python error: Aborted
+[36m(pid=103236)[0m 
+[33m(raylet)[0m [2024-04-02 14:44:04,645 E 103103 103103] (raylet) worker_pool.cc:1121: Failed to send exit request: GrpcUnavailable: RPC Error message: Socket closed; RPC Error details: 
+[36m(_WandbLoggingActor pid=108459)[0m wandb: Currently logged in as: fin-jason20. Use `wandb login --relogin` to force relogin
+[36m(pid=103287)[0m [2024-04-02 14:44:04,351 E 103287 105689] logging.cc:97: Unhandled exception: N5boost10wrapexceptINS_6system12system_errorEEE. what(): thread: Resource temporarily unavailable [system:11][32m [repeated 4x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(pid=103287)[0m [2024-04-02 14:44:04,489 E 103287 105689] logging.cc:104: Stack trace: [32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m  /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10051da) [0x2b8f54b461da] ray::operator<<()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x1007918) [0x2b8f54b48918] ray::TerminateHandler()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m [32m [repeated 20x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x558e86) [0x2b8f54099e86] boost::throw_exception<>()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10f14fb) [0x2b8f54c324fb] boost::asio::detail::do_throw_error()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10f1f1b) [0x2b8f54c32f1b] boost::asio::detail::posix_thread::start_thread()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10f237c) [0x2b8f54c3337c] boost::asio::thread_pool::thread_pool()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0xa30504) [0x2b8f54571504] ray::rpc::(anonymous namespace)::_GetServerCallExecutor()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(_ZN3ray3rpc21GetServerCallExecutorEv+0x9) [0x2b8f54571599] ray::rpc::GetServerCallExecutor()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0xa3b0de) [0x2b8f5457c0de] std::_Function_handler<>::_M_invoke()[32m [repeated 8x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(_ZN3ray4core10CoreWorker10HandleExitENS_3rpc11ExitRequestEPNS2_9ExitReplyESt8functionIFvNS_6StatusES6_IFvvEES9_EE+0x108) [0x2b8f542d96e8] ray::core::CoreWorker::HandleExit()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(_ZN3ray3rpc14ServerCallImplINS0_24CoreWorkerServiceHandlerENS0_11ExitRequestENS0_9ExitReplyELNS0_8AuthTypeE0EE17HandleRequestImplEb+0xfe) [0x2b8f542ca13e] ray::rpc::ServerCallImpl<>::HandleRequestImpl()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0xa41cee) [0x2b8f54582cee] EventTracker::RecordExecution()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0xa3b556) [0x2b8f5457c556] boost::asio::detail::completion_handler<>::do_complete()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10eeb8b) [0x2b8f54c2fb8b] boost::asio::detail::scheduler::do_run_one()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10f0509) [0x2b8f54c31509] boost::asio::detail::scheduler::run()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0x10f0c12) [0x2b8f54c31c12] boost::asio::io_context::run()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(_ZN3ray4core10CoreWorker12RunIOServiceEv+0xc9) [0x2b8f542b01d9] ray::core::CoreWorker::RunIOService()[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_raylet.so(+0xb2ee00) [0x2b8f5466fe00] thread_proxy[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /usr/lib64/libpthread.so.0(+0x7ea5) [0x2b8f4c4d3ea5] start_thread[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m /usr/lib64/libc.so.6(clone+0x6d) [0x2b8f4ceefb0d] clone[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m *** SIGABRT received at time=1712083444 on cpu 8 ***[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m PC: @     0x2b8f4ce27387  (unknown)  raise[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m     @     0x2b8f5541835a  (unknown)  __cxxabiv1::__terminate()[32m [repeated 8x across cluster][0m
+[36m(pid=103287)[0m     @     0x2b8f55418580  (unknown)  (unknown)[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m [2024-04-02 14:44:04,490 E 103287 105689] logging.cc:361: *** SIGABRT received at time=1712083444 on cpu 8 ***[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m [2024-04-02 14:44:04,490 E 103287 105689] logging.cc:361: PC: @     0x2b8f4ce27387  (unknown)  raise[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m [2024-04-02 14:44:04,490 E 103287 105689] logging.cc:361:     @     0x2b8f5541835a  (unknown)  __cxxabiv1::__terminate()[32m [repeated 8x across cluster][0m
+[36m(pid=103287)[0m [2024-04-02 14:44:04,490 E 103287 105689] logging.cc:361:     @     0x2b8f55418580  (unknown)  (unknown)[32m [repeated 4x across cluster][0m
+[36m(pid=103287)[0m Fatal Python error: Aborted[32m [repeated 4x across cluster][0m
+[33m(raylet)[0m [2024-04-02 14:44:04,645 E 103103 103103] (raylet) worker_pool.cc:1121: Failed to send exit request: GrpcUnavailable: RPC Error message: Socket closed; RPC Error details: [32m [repeated 4x across cluster][0m
+[36m(_WandbLoggingActor pid=108447)[0m wandb: Tracking run with wandb version 0.16.5
+[36m(_WandbLoggingActor pid=108447)[0m wandb: Run data is saved locally in /home/jpfinley/ray_results/_tune_2024-04-02_14-44-04/_tune_fa9b4_00003_3_box=0.1726,cls=3.4407,copy_paste=0.2953,degrees=19.8465,fliplr=0.0692,flipud=0.2166,hsv_h=0.0838,hsv_s=0.4613,_2024-04-02_14-44-04/wandb/run-20240402_144451-fa9b4_00003
+[36m(_WandbLoggingActor pid=108447)[0m wandb: Run `wandb offline` to turn off syncing.
+[36m(_WandbLoggingActor pid=108447)[0m wandb: Syncing run _tune_fa9b4_00003
+[36m(_WandbLoggingActor pid=108447)[0m wandb: ⭐️ View project at https://wandb.ai/fin-jason20/YOLOv8-tune
+[36m(_WandbLoggingActor pid=108447)[0m wandb: 🚀 View run at https://wandb.ai/fin-jason20/YOLOv8-tune/runs/fa9b4_00003/workspace
+[36m(_WandbLoggingActor pid=108461)[0m wandb: Currently logged in as: fin-jason20. Use `wandb login --relogin` to force relogin[32m [repeated 7x across cluster][0m
+[36m(_WandbLoggingActor pid=108437)[0m wandb: Tracking run with wandb version 0.16.5[32m [repeated 7x across cluster][0m
+[36m(_WandbLoggingActor pid=108437)[0m wandb: Run data is saved locally in /home/jpfinley/ray_results/_tune_2024-04-02_14-44-04/_tune_fa9b4_00001_1_box=0.0857,cls=3.8545,copy_paste=0.5914,degrees=41.5726,fliplr=0.8960,flipud=0.6972,hsv_h=0.0363,hsv_s=0.7221,_2024-04-02_14-44-04/wandb/run-20240402_144451-fa9b4_00001[32m [repeated 7x across cluster][0m
+[36m(_WandbLoggingActor pid=108437)[0m wandb: Run `wandb offline` to turn off syncing.[32m [repeated 7x across cluster][0m
+[36m(_WandbLoggingActor pid=108440)[0m wandb: Syncing run _tune_fa9b4_00004[32m [repeated 7x across cluster][0m
+[36m(_WandbLoggingActor pid=108440)[0m wandb: ⭐️ View project at https://wandb.ai/fin-jason20/YOLOv8-tune[32m [repeated 7x across cluster][0m
+[36m(_WandbLoggingActor pid=108440)[0m wandb: 🚀 View run at https://wandb.ai/fin-jason20/YOLOv8-tune/runs/fa9b4_00004/workspace[32m [repeated 7x across cluster][0m
+[36m(_tune pid=107831)[0m wandb: Currently logged in as: fin-jason20. Use `wandb login --relogin` to force relogin
+[36m(_tune pid=107832)[0m wandb: Currently logged in as: fin-jason20. Use `wandb login --relogin` to force relogin
+[36m(_tune pid=107826)[0m wandb: Syncing run train
+[36m(_tune pid=107826)[0m wandb: Tracking run with wandb version 0.16.5
+[36m(_tune pid=107826)[0m wandb: Run data is saved locally in /home/jpfinley/ray_results/_tune_2024-04-02_14-44-04/_tune_fa9b4_00001_1_box=0.0857,cls=3.8545,copy_paste=0.5914,degrees=41.5726,fliplr=0.8960,flipud=0.6972,hsv_h=0.0363,hsv_s=0.7221,_2024-04-02_14-44-04/wandb/run-20240402_144525-pry9xlaf
+[36m(_tune pid=107826)[0m wandb: Run `wandb offline` to turn off syncing.
+[36m(_tune pid=107826)[0m wandb: ⭐️ View project at https://wandb.ai/fin-jason20/YOLOv8
+[36m(_tune pid=107826)[0m wandb: 🚀 View run at https://wandb.ai/fin-jason20/YOLOv8/runs/pry9xlaf/workspace
+[36m(_tune pid=107829)[0m wandb: Currently logged in as: fin-jason20. Use `wandb login --relogin` to force relogin[32m [repeated 6x across cluster][0m
+[36m(_tune pid=107830)[0m wandb: Tracking run with wandb version 0.16.5
+[36m(_tune pid=107830)[0m wandb: Run data is saved locally in /home/jpfinley/ray_results/_tune_2024-04-02_14-44-04/_tune_fa9b4_00005_5_box=0.0542,cls=2.7789,copy_paste=0.9637,degrees=22.9866,fliplr=0.8389,flipud=0.5075,hsv_h=0.0484,hsv_s=0.7715,_2024-04-02_14-44-04/wandb/run-20240402_144525-xqb4v7xc
+[36m(_tune pid=107830)[0m wandb: Run `wandb offline` to turn off syncing.
+[36m(_tune pid=107832)[0m wandb: ⭐️ View project at https://wandb.ai/fin-jason20/YOLOv8
+[36m(_tune pid=107832)[0m wandb: 🚀 View run at https://wandb.ai/fin-jason20/YOLOv8/runs/eb7bzd49/workspace
+[36m(_tune pid=107826)[0m [34m[1mtrain: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/train/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s][34m[1mtrain: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/train/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s]
+[36m(_tune pid=107830)[0m [34m[1mval: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/valid/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s][34m[1mval: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/valid/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s]
+[36m(_tune pid=107832)[0m   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(_tune pid=107827)[0m wandb: Syncing run train[32m [repeated 7x across cluster][0m
+[36m(_tune pid=107827)[0m wandb: Tracking run with wandb version 0.16.5[32m [repeated 6x across cluster][0m
+[36m(_tune pid=107827)[0m wandb: Run data is saved locally in /home/jpfinley/ray_results/_tune_2024-04-02_14-44-04/_tune_fa9b4_00002_2_box=0.1246,cls=3.1375,copy_paste=0.5694,degrees=19.7814,fliplr=0.8800,flipud=0.1753,hsv_h=0.0757,hsv_s=0.0155,_2024-04-02_14-44-04/wandb/run-20240402_144525-pg9c0hse[32m [repeated 6x across cluster][0m
+[36m(_tune pid=107827)[0m wandb: Run `wandb offline` to turn off syncing.[32m [repeated 6x across cluster][0m
+[36m(_tune pid=107827)[0m wandb: ⭐️ View project at https://wandb.ai/fin-jason20/YOLOv8[32m [repeated 6x across cluster][0m
+[36m(_tune pid=107827)[0m wandb: 🚀 View run at https://wandb.ai/fin-jason20/YOLOv8/runs/pg9c0hse/workspace[32m [repeated 6x across cluster][0m
+[36m(_tune pid=107829)[0m [34m[1mtrain: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/train/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s][34m[1mtrain: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/train/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s][32m [repeated 7x across cluster][0m
+[36m(_tune pid=107827)[0m [34m[1mval: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/valid/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s][34m[1mval: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/valid/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s][32m [repeated 7x across cluster][0m
+2024-04-02 14:51:53,195	ERROR tune_controller.py:1374 -- Trial task failed for trial _tune_fa9b4_00003
+Traceback (most recent call last):
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_private/worker.py", line 2626, in get
+    raise value
+ray.exceptions.RayActorError: The actor died unexpectedly before finishing this task.
+	class_name: ImplicitFunc
+	actor_id: 4ed4e65815623ebefee9be1d01000000
+	pid: 107828
+	namespace: af60a061-c947-4894-b19b-53124fdb9558
+	ip: 172.18.36.128
+The actor is dead because its worker process has died. Worker exit type: SYSTEM_ERROR Worker exit detail: Worker unexpectedly exits with a connection error code 2. End of file. There are some potential root causes. (1) The process is killed by SIGKILL by OOM killer due to high memory usage. (2) ray stop --force is called. (3) The worker is crashed unexpectedly due to SIGSEGV or other unexpected errors.
+[36m(_WandbLoggingActor pid=108447)[0m wandb: - 0.008 MB of 0.008 MB uploaded
+[36m(_tune pid=107831)[0m   0%|          | 0/1 [00:00<?, ?it/s][32m [repeated 7x across cluster][0m
+[36m(_WandbLoggingActor pid=108447)[0m wandb: \ 0.008 MB of 0.008 MB uploaded
+[36m(_WandbLoggingActor pid=108447)[0m wandb: | 0.008 MB of 0.008 MB uploadedwandb: / 0.012 MB of 0.012 MB uploadedwandb:                                                                                
+[36m(_WandbLoggingActor pid=108447)[0m wandb: 🚀 View run _tune_fa9b4_00003 at: https://wandb.ai/fin-jason20/YOLOv8-tune/runs/fa9b4_00003/workspace
+[36m(_WandbLoggingActor pid=108447)[0m wandb: Synced 4 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[36m(_WandbLoggingActor pid=108447)[0m wandb: Find logs at: ./wandb/run-20240402_144451-fa9b4_00003/logs
+[36m(_WandbLoggingActor pid=111952)[0m wandb: Currently logged in as: fin-jason20. Use `wandb login --relogin` to force relogin
+[36m(_WandbLoggingActor pid=111952)[0m wandb: Tracking run with wandb version 0.16.5
+[36m(_WandbLoggingActor pid=111952)[0m wandb: Run data is saved locally in /home/jpfinley/ray_results/_tune_2024-04-02_14-44-04/_tune_fa9b4_00008_8_box=0.1400,cls=3.9211,copy_paste=0.0544,degrees=17.5411,fliplr=0.6186,flipud=0.3870,hsv_h=0.0558,hsv_s=0.1635,_2024-04-02_14-44-04/wandb/run-20240402_145235-fa9b4_00008
+[36m(_WandbLoggingActor pid=111952)[0m wandb: Run `wandb offline` to turn off syncing.
+[36m(_WandbLoggingActor pid=111952)[0m wandb: Syncing run _tune_fa9b4_00008
+[36m(_WandbLoggingActor pid=111952)[0m wandb: ⭐️ View project at https://wandb.ai/fin-jason20/YOLOv8-tune
+[36m(_WandbLoggingActor pid=111952)[0m wandb: 🚀 View run at https://wandb.ai/fin-jason20/YOLOv8-tune/runs/fa9b4_00008/workspace
+[36m(_tune pid=111859)[0m wandb: Currently logged in as: fin-jason20. Use `wandb login --relogin` to force relogin
+[36m(_tune pid=111859)[0m wandb: Tracking run with wandb version 0.16.5
+[36m(_tune pid=111859)[0m wandb: Run data is saved locally in /home/jpfinley/ray_results/_tune_2024-04-02_14-44-04/_tune_fa9b4_00008_8_box=0.1400,cls=3.9211,copy_paste=0.0544,degrees=17.5411,fliplr=0.6186,flipud=0.3870,hsv_h=0.0558,hsv_s=0.1635,_2024-04-02_14-44-04/wandb/run-20240402_145316-v6ardf54
+[36m(_tune pid=111859)[0m wandb: Run `wandb offline` to turn off syncing.
+[36m(_tune pid=111859)[0m wandb: Syncing run train
+[36m(_tune pid=111859)[0m wandb: ⭐️ View project at https://wandb.ai/fin-jason20/YOLOv8
+[36m(_tune pid=111859)[0m wandb: 🚀 View run at https://wandb.ai/fin-jason20/YOLOv8/runs/v6ardf54/workspace
+[36m(_tune pid=111859)[0m [34m[1mtrain: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/train/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s][34m[1mtrain: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/train/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s]
+[36m(_tune pid=111859)[0m [34m[1mval: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/valid/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s][34m[1mval: [0mScanning /scratch/gilbreth/jpfinley/ultralytics/datasets/micro/valid/labels.cache... 12 images, 3 backgrounds, 0 corrupt: 100%|██████████| 15/15 [00:00<?, ?it/s]
+[36m(_tune pid=111859)[0m   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(_tune pid=107832)[0m        1/30         0G    0.01256      3.101      3.039        219        640:   0%|          | 0/1 [15:41<?, ?it/s]       1/30         0G    0.01256      3.101      3.039        219        640: 100%|██████████| 1/1 [15:41<00:00, 941.10s/it]       1/30         0G    0.01256      3.101      3.039        219        640: 100%|██████████| 1/1 [15:41<00:00, 941.10s/it]
+[36m(_tune pid=107832)[0m                  Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(_tune pid=107831)[0m        1/30         0G    0.05417      27.97      2.967        112        640:   0%|          | 0/1 [15:42<?, ?it/s]       1/30         0G    0.05417      27.97      2.967        112        640: 100%|██████████| 1/1 [15:42<00:00, 942.19s/it]       1/30         0G    0.05417      27.97      2.967        112        640: 100%|██████████| 1/1 [15:42<00:00, 942.19s/it]
+[36m(_tune pid=107830)[0m        1/30         0G    0.01986      19.56      2.845         91        640: 100%|██████████| 1/1 [15:43<00:00, 943.86s/it]       1/30         0G    0.01986      19.56      2.845         91        640: 100%|██████████| 1/1 [15:43<00:00, 943.86s/it]
+[36m(_tune pid=107830)[0m                  Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s][32m [repeated 3x across cluster][0m
+[36m(_tune pid=107829)[0m        1/30         0G    0.07914      3.106      2.998        267        640:   0%|          | 0/1 [15:49<?, ?it/s][32m [repeated 3x across cluster][0m
+[36m(_tune pid=107829)[0m        1/30         0G    0.07914      3.106      2.998        267        640: 100%|██████████| 1/1 [15:49<00:00, 949.76s/it]       1/30         0G    0.07914      3.106      2.998        267        640: 100%|██████████| 1/1 [15:49<00:00, 949.76s/it]
+[36m(_tune pid=107827)[0m        1/30         0G    0.05411      20.48       3.02        252        640: 100%|██████████| 1/1 [15:50<00:00, 950.11s/it]       1/30         0G    0.05411      20.48       3.02        252        640: 100%|██████████| 1/1 [15:50<00:00, 950.11s/it]
+[36m(_tune pid=107832)[0m                  Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [05:03<00:00, 303.96s/it]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [05:03<00:00, 303.97s/it]
+[36m(_tune pid=107825)[0m                  Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s][32m [repeated 3x across cluster][0m
+[36m(_tune pid=107825)[0m        1/30         0G    0.02401      20.39      3.015        288        640:   0%|          | 0/1 [15:50<?, ?it/s][32m [repeated 2x across cluster][0m
+[36m(_tune pid=107825)[0m        1/30         0G    0.02401      20.39      3.015        288        640: 100%|██████████| 1/1 [15:50<00:00, 950.87s/it]       1/30         0G    0.02401      20.39      3.015        288        640: 100%|██████████| 1/1 [15:50<00:00, 950.87s/it]
+[36m(_tune pid=107831)[0m                  Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [05:03<00:00, 303.39s/it]
+[36m(_tune pid=107831)[0m                  Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [05:03<00:00, 303.47s/it]
+[36m(_tune pid=107825)[0m                  Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [05:03<00:00, 303.32s/it]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [05:03<00:00, 303.32s/it][32m [repeated 3x across cluster][0m
+[36m(_tune pid=107832)[0m   0%|          | 0/1 [00:00<?, ?it/s]
+[36m(_tune pid=107827)[0m                  Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [05:05<00:00, 305.02s/it]                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 1/1 [05:05<00:00, 305.02s/it][32m [repeated 2x across cluster][0m
+[36m(_tune pid=107829)[0m   0%|          | 0/1 [00:00<?, ?it/s][32m [repeated 4x across cluster][0m
+[36m(_tune pid=111859)[0m        1/30         0G    0.06214      26.14      3.079        307        640:   0%|          | 0/1 [15:58<?, ?it/s]       1/30         0G    0.06214      26.14      3.079        307        640: 100%|██████████| 1/1 [15:58<00:00, 958.85s/it]       1/30         0G    0.06214      26.14      3.079        307        640: 100%|██████████| 1/1 [15:58<00:00, 958.85s/it][32m [repeated 3x across cluster][0m
+[36m(_tune pid=111859)[0m                  Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]
+2024-04-02 15:12:45,831	ERROR tune_controller.py:1374 -- Trial task failed for trial _tune_fa9b4_00006
+Traceback (most recent call last):
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jpfinley/.conda/envs/cent7/2020.11-py38/yolov8/lib/python3.8/site-packages/ray/_private/worker.py", line 2626, in get
+    raise value
+ray.exceptions.RayActorError: The actor died unexpectedly before finishing this task.
+	class_name: ImplicitFunc
+	actor_id: b7bfbfa8829543d6b0f68f9a01000000
+	pid: 107831
+	namespace: af60a061-c947-4894-b19b-53124fdb9558
+	ip: 172.18.36.128
+The actor is dead because its worker process has died. Worker exit type: SYSTEM_ERROR Worker exit detail: Worker unexpectedly exits with a connection error code 2. End of file. There are some potential root causes. (1) The process is killed by SIGKILL by OOM killer due to high memory usage. (2) ray stop --force is called. (3) The worker is crashed unexpectedly due to SIGSEGV or other unexpected errors.
+slurmstepd: error: *** JOB 5247042 ON gilbreth-k031 CANCELLED AT 2024-04-02T17:43:38 DUE TO TIME LIMIT ***
+slurmstepd: error: Detected 17432 oom_kill events in StepId=5247042.batch. Some of the step tasks have been OOM Killed.

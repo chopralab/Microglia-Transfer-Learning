@@ -1,0 +1,15 @@
+metrics
+
+Microglia
+n results_dict: {'metrics/precision(B)': 0.6359415970119378, 'metrics/recall(B)': 0.3901098901098901, 'metrics/mAP50(B)': 0.5228395427684258, 'metrics/mAP50-95(B)': 0.17135055981557418, 'fitness': 0.20649945811085935}
+s results_dict: {'metrics/precision(B)': 0.4172931783114038, 'metrics/recall(B)': 0.3516483516483517, 'metrics/mAP50(B)': 0.30958705547343385, 'metrics/mAP50-95(B)': 0.1143677005604222, 'fitness': 0.13388963605172338}
+l results_dict: {'metrics/precision(B)': 0.03506489582597821, 'metrics/recall(B)': 0.10989010989010989, 'metrics/mAP50(B)': 0.027191935317068053, 'metrics/mAP50-95(B)': 0.006501229891565189, 'fitness': 0.008570300434115476}
+m results_dict: {'metrics/precision(B)': 0.4246608865763909, 'metrics/recall(B)': 0.5921104129599589, 'metrics/mAP50(B)': 0.4104079244663572, 'metrics/mAP50-95(B)': 0.12439754564648531, 'fitness': 0.1529985835284725}
+x results_dict: {'metrics/precision(B)': 0.2467289719626168, 'metrics/recall(B)': 0.7252747252747253, 'metrics/mAP50(B)': 0.21680764648565054, 'metrics/mAP50-95(B)': 0.06307251580456916, 'fitness': 0.07844602887267729}
+
+Transferred
+n results_dict: {'metrics/precision(B)': 0.6397992344969794, 'metrics/recall(B)': 0.7307692307692307, 'metrics/mAP50(B)': 0.7001005471169974, 'metrics/mAP50-95(B)': 0.28889642771627944, 'fitness': 0.33001683965635126}
+s results_dict: {'metrics/precision(B)': 0.5586599410251718, 'metrics/recall(B)': 0.6318681318681318, 'metrics/mAP50(B)': 0.5761963075447554, 'metrics/mAP50-95(B)': 0.22766373211741003, 'fitness': 0.2625169896601446}
+l results_dict: {'metrics/precision(B)': 0.518934580849599, 'metrics/recall(B)': 0.5690016207540086, 'metrics/mAP50(B)': 0.5288069862503822, 'metrics/mAP50-95(B)': 0.20940788269968308, 'fitness': 0.24134779305475298}
+m results_dict: {'metrics/precision(B)': 0.5923489665469551, 'metrics/recall(B)': 0.6467056016743404, 'metrics/mAP50(B)': 0.6472167436999899, 'metrics/mAP50-95(B)': 0.2366040262538575, 'fitness': 0.2776652979984708}
+x results_dict: {'metrics/precision(B)': 0.5833615380178367, 'metrics/recall(B)': 0.5714285714285714, 'metrics/mAP50(B)': 0.48036062460360063, 'metrics/mAP50-95(B)': 0.12615052374878347, 'fitness': 0.1615715338342652}
